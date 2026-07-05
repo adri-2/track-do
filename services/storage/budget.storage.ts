@@ -13,3 +13,7 @@ export async function getBudget() {
 export async function deleteBudget() {
   await remove(StorageKeys.BUDGET);
 }
+
+export async function listBudget() {
+  return await get<Budget[]>(StorageKeys.BUDGET);
+}

@@ -17,7 +17,7 @@ export default function Home() {
     async function loadBudget() {
       const data = await getBudget();
       setBudget(data);
-      console.log("Bud", data);
+      // console.log("Bud", data);
     }
     loadBudget();
   }, []);

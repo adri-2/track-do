@@ -32,6 +32,13 @@ export default function AddScreen() {
       description: formData.description,
       budgetId: "1",
     });
+    setFormData({
+      amount: "",
+      categoryId: "transport",
+      date: new Date(),
+      description: "",
+      budgetId: "",
+    });
     router.replace("/(tabs)/expenses");
   }
   const updateField = <k extends keyof typeof formData>(
