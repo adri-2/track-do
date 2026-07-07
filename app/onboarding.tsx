@@ -29,7 +29,7 @@ export default function Onboarding() {
       <Button
         title="Créer le budget"
         onPress={() => {
-          router.replace("/(tabs)/home");
+          router.replace("/addBudget");
         }}
       />
     </SafeAreaView>

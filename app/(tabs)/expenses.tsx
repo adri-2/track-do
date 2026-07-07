@@ -4,11 +4,6 @@ import { getExpenses } from "@/services/storage/expense.storage";
 import { useEffect, useState } from "react";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-type Props = {
-  title: string;
-  total: number;
-  data: Expense[];
-};
 
 export default function ExpensesScreen() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -27,9 +22,9 @@ export default function ExpensesScreen() {
     <SafeAreaView style={styles.section}>
       {/* Header */}
       <View style={styles.header}>
-        <View>
-          <ThemedText variant="title">Depenses</ThemedText>
-        </View>
+        {/* <View> */}
+        <ThemedText variant="title">Depenses</ThemedText>
+        {/* </View> */}
       </View>
 
       {/* Contenu */}
@@ -39,7 +34,7 @@ export default function ExpensesScreen() {
       </View>
 
       <FlatList
-        data={expenses}
+        data={[...expenses].reverse()}
         keyExtractor={(item) => item.id}
         scrollEnabled={false}
         renderItem={({ item }) => (
