@@ -24,7 +24,7 @@ export default function Onboarding() {
         TrackDo
       </ThemedText>
       <ThemedText variant="body" color="text">
-        suivez, Analyser, Economisez
+        suivez, Analyser, Economisez avec track Do
       </ThemedText>
       <Button
         title="Créer le budget"
